@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 
 
+# Defining the input data model
 class Customer(BaseModel):
     credit_score: int
     age: int
