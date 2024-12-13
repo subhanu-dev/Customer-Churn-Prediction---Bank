@@ -28,11 +28,6 @@ def index():
     return {"message": "Churn Prediction for Bank"}
 
 
-@app.get("/welcome")
-def getname(name: str):
-    return {"welcome to the churn prediction ": f"{name}"}
-
-
 @app.post("/predict")
 async def predict_churn(data: Customer):
     df = pd.DataFrame(
@@ -45,7 +40,7 @@ async def predict_churn(data: Customer):
     # Get prediction probabilities
     probabilities = classifier.predict_proba(scaled_features)
 
-    if prediction[1]:
+    if prediction == 1:
         customer_status = "The customer will churn"
     else:
         customer_status = "The customer will not churn"
