@@ -11,8 +11,6 @@ create a virtual environment : <br>
 instantiate the environment: <br>
 `.\mlprojectenv\Scripts\activate`
 
-nilameta linux wla nm : `source myenv/bin/activate`
-
 download the dependencies: <br>
 `pip install -r requirements.txt`
 
