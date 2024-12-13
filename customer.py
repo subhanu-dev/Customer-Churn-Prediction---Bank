@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class customer(BaseModel):
+class Customer(BaseModel):
     credit_score: int
     age: int
     tenure: int
