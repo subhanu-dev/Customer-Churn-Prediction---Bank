@@ -2,7 +2,7 @@ Bank Customer Churn Prediction Model 🏦
 ===
 
 <br>
-<img src="images/model-image.png" height="600px" width="1000px">
+<img src="images/model-image.png" height="550px" width="1000px">
 
 **Tech Stack Used**
 
