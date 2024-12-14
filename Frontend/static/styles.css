@@ -5,14 +5,34 @@
     font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
 }
 
+h1 {
+    font-weight: 600;
+    text-align: center;
+    padding-top: 2.5rem;
+}
 
 .form-container {
     max-width: 800px;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
-
+    margin-top: 4rem;
 }
+
+/************** removing those pesky little up and down arrows************ */
+
+/* For Chrome, Edge, and Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 
 #churnForm {
     display: grid;
@@ -36,6 +56,7 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-weight: 200;
 }
 
 .form-row.full-width {
