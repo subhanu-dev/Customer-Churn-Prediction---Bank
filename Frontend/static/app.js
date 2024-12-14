@@ -104,8 +104,15 @@ async function submitForm() {
         // Process the response
         if (response.ok) {
             const result = await response.json();
-            alert(`Prediction: ${result.prediction}\nProbability:\n - Churn: ${result.probability.churn}\n - Not Churn: ${result.probability.not_churn}`);
-        } else {
+            const highestProbability = Math.max(result.probability.churn, result.probability.not_churn);
+            const predictionMessage = result.prediction;
+
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerHTML = `
+                <h3>Prediction: ${predictionMessage}</h3>
+                <p>Probability: ${highestProbability}</p>`
+        }
+        else {
             alert('An error occurred while processing the prediction.');
         }
 

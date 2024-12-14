@@ -8,7 +8,7 @@ from fastapi.staticfiles import StaticFiles
 # iput data model class
 from customer import Customer
 
-import numpy as np
+
 import pandas as pd
 import pickle  # pickle is built in
 
