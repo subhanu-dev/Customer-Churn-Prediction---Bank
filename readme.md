@@ -17,7 +17,8 @@ Bank Customer Churn Prediction Model 🏦
 
 ## Project Overview
 
-Customer Churn Prediction Model for a bank to determine which customers are likely to leave the bank. The aim is to recognize which users are probable to churn. We can input a customer data and get the result on whether this customer might stick with the bank or leave for another competitor based on the machine learning model. <br>
+Using machine learning to predict which customers are likely to leave the bank. The aim is to recognize which users are probable to churn. We can input a customer data and get the result on whether this customer might stick with the bank or leave for another competitor based on the machine learning model. 
+
 The data was trained and tested with 4 ML models. Class imbalance was addressed with SMOTE and compared how weights and resampling affect model perfomance. The preprocessing and EDA notebook is available under the `/notebooks` folder. 
 
 | Model                                   | Accuracy | F1 Score | Precision | Recall   |
