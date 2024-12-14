@@ -1,6 +1,11 @@
 import uvicorn  # ASGI
 from fastapi import FastAPI
 
+# modules for serving root files
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+
+# iput data model class
 from customer import Customer
 
 import numpy as np
@@ -23,9 +28,14 @@ with open("scaler.pkl", "rb") as scaler_file:
 # routers
 
 
-@app.get("/")
-def index():
-    return {"message": "Churn Prediction for Bank"}
+# static folder for the frontend root endpoint
+@app.get("/", response_class=HTMLResponse)
+async def get_home():
+    with open("./Frontend/index.html") as f:
+        return f.read()
+
+
+app.mount("/static", StaticFiles(directory="Frontend/static"), name="static")
 
 
 @app.post("/predict")
@@ -60,6 +70,3 @@ async def predict_churn(data: Customer):
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)
-
-
-# uvicorn main:app --reload
