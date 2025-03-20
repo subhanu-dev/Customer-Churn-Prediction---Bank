@@ -76,5 +76,5 @@ navigate to the localhost 8080 port on any browser.
 `http://127.0.0.1:8000/`
 
 ---
-
+Made with ❤️ by [Subhanu](https://github.com/subhanu-dev)
 
